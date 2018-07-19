@@ -1,0 +1,28 @@
+import java.util.*;
+// Make sure your class is public
+ public class Kata 
+ {
+    public static double findUniq(double arr[]) 
+    {
+      double first = arr[0];
+      double last = arr[arr.length - 1];
+      double retval = 0;
+      for(int i = 1; i < arr.length - 1; i++)
+        {
+        if(arr[i] != first && arr[i] != last)
+          {
+          retval = arr[i];
+          }
+        if(first != arr[i] && first != last )
+          {
+          retval = first;
+          }
+        if(first != last && arr[i] != last)
+           {
+            retval = last;
+           }
+           
+         }
+       return retval;
+    }
+}
